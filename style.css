@@ -1,1 +1,221 @@
-/* Add you CSS here */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jersey+25&display=swap');
+
+/* Simple styles for the personal website */
+
+:root {
+  /* Define color variables for the website */
+  --text: #0d0714;
+  --background: #f7f2fc;
+  --primary: #8631df;
+  --secondary: #b477f4;
+  --accent: #9939fc;
+}
+
+body {
+  font-family: 'Bebas Neue', 'Jersey 25', Arial, sans-serif; /* Use the new fonts, fallback to Arial */
+  margin: 0;
+  padding: 0;
+  background-color: var(--background); /* Use background variable */
+  color: var(--text); /* Use text color variable */
+}
+
+.hero,
+.bio,
+.skills,
+.songs,
+.hobbies {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+}
+
+.hero {
+  background-color: var(--primary); /* Use primary color for hero section */
+  color: var(--background);
+  text-align: center;
+  padding: 40px 20px; /* Space inside the hero section */
+}
+
+.hero img {
+  border-radius: 50%; /* Makes the image perfectly round */
+  border: 3px solid var(--primary); /* Optional: add a border for style */
+  display: block;
+  margin: 16px auto;
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+}
+
+.bio {
+  background-color: var(--background);
+  margin: 0 auto; /* Removed vertical margin to eliminate spacing between sections */
+  padding: 20px;
+  border-radius: 0; /* Removed rounded corners */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Soft shadow */
+  color: var(--text);
+  text-align: center;
+}
+
+.skills {
+  background-color: var(--background);
+  margin: 0 auto; /* Removed vertical margin */
+  padding: 20px;
+  border-radius: 0;
+  color: var(--text);
+  text-align: center;
+}
+
+.skills ul {
+  display: flex; /* Arrange skill items in a row */
+  flex-wrap: wrap; /* Allow items to wrap to next line if needed */
+  justify-content: center; /* Center the items horizontally */
+  gap: 20px; /* Space between each skill */
+  list-style-type: none; /* Remove bullet points */
+  padding-left: 0;
+  margin: 0;
+}
+
+.skills li {
+  background-color: var(--secondary); /* Use secondary color for each skill box */
+  color: var(--text);
+  border-radius: 0;
+  padding: 16px 24px;
+  min-width: 120px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  font-weight: bold;
+  margin-bottom: 0; /* Remove extra space since gap is used */
+}
+
+.skills li img {
+  height: 32px;
+  width: 32px;
+  object-fit: contain; /* Keep aspect ratio */
+  vertical-align: middle; /* Align with text */
+  margin-right: 8px; /* Space between image and text */
+}
+
+.navbar {
+  width: 75%; /* Spans about 70-80% of the screen */
+  margin: 0 auto; /* Center the navbar horizontally */
+  background-color: var(--background);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: fixed; /* Keep navbar at the top */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Make sure navbar stays above other content */
+}
+
+.navbar ul {
+  list-style-type: none; /* Remove bullet points */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Arrange items in a row */
+  justify-content: space-around; /* Evenly space the links */
+}
+
+.navbar li {
+  flex: 1; /* Each nav item takes equal width */
+}
+
+.navbar a {
+  display: block;
+  width: 100%; /* Make link fill the li */
+  height: 100%;
+  padding: 14px 0; /* Top and bottom padding only */
+  text-align: center;
+  text-decoration: none; /* Remove underline */
+  color: var(--primary); /* Use primary color for nav links */
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background 0.2s, padding 0.2s; /* Add padding to transition for smoothness */
+  box-sizing: border-box; /* Prevents size change on hover */
+}
+
+.navbar a:hover {
+  background-color: var(--accent); /* Use accent color on hover */
+  color: var(--background);
+}
+
+.songs {
+  background-color: var(--background); /* Use background color for songs section */
+  margin: 0 auto; /* Removed vertical margin */
+  padding: 20px;
+  border-radius: 0;
+  color: var(--text);
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.songs ul {
+  display: flex; /* Arrange song items in a row */
+  flex-wrap: wrap; /* Allow items to wrap to next line if needed */
+  justify-content: center; /* Center the items horizontally */
+  gap: 20px; /* Space between each song */
+  list-style-type: none; /* Remove bullet points */
+  padding-left: 0;
+  margin: 0;
+}
+
+.songs li {
+  background-color: var(--secondary); /* Use secondary color for each song box */
+  color: var(--text);
+  border-radius: 0;
+  padding: 16px 24px;
+  min-width: 180px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  font-weight: bold;
+}
+
+.hobbies {
+  background-color: var(--background);
+  margin: 0 auto; /* Removed vertical margin */
+  padding: 20px;
+  border-radius: 0;
+  color: var(--text);
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.hobbies ul {
+  display: flex; /* Arrange hobby items in a row */
+  flex-wrap: wrap; /* Allow items to wrap to next line if needed */
+  justify-content: center; /* Center the items horizontally */
+  gap: 20px; /* Space between each hobby */
+  list-style-type: none; /* Remove bullet points */
+  padding-left: 0;
+  margin: 0;
+}
+
+.hobbies li {
+  background-color: var(--secondary); /* Use secondary color for each hobby box */
+  color: var(--text);
+  border-radius: 0;
+  padding: 16px 24px;
+  min-width: 180px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  font-weight: bold;
+}
+
+.footer {
+  background-color: var(--primary); /* Use primary color for footer */
+  color: var(--background); /* Use background color for text */
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  font-size: 1.1em;
+  margin-top: 0;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
